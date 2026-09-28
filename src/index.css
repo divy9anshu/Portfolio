@@ -1,0 +1,122 @@
+@import './styles/fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-hoves text-canva-green bg-canva-cream transition-colors duration-300;
+  }
+
+  ::selection {
+    background-color: #1b392c;
+    color: #fffdf0;
+  }
+}
+
+/* Modern Sans-Serif Typography Stack */
+.font-migra {
+  font-family: 'Plus Jakarta Sans', 'TTHoves', 'Inter', system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.025em;
+}
+
+.font-hoves {
+  font-family: 'Plus Jakarta Sans', 'TTHoves', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f2edd1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #aec4c4;
+  border-radius: 9999px;
+  border: 2px solid #f2edd1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8da8a8;
+}
+
+/* Smooth Editorial Card Hover */
+.editorial-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Pill Outline Buttons */
+.btn-pill {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-full border border-canva-green text-canva-green font-hoves text-sm font-medium tracking-wide transition-all duration-300 hover:bg-canva-green hover:text-canva-cream active:scale-95;
+}
+
+.btn-pill-solid {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-full bg-canva-green text-canva-cream font-hoves text-sm font-medium tracking-wide transition-all duration-300 hover:bg-canva-green-dark hover:shadow-lg active:scale-95;
+}
+
+/* Section styling */
+.section-hero {
+  background-color: #aec4c4;
+}
+
+.section-about {
+  background-color: #fffdf0;
+}
+
+.section-services {
+  background-color: #f2edd1;
+}
+
+.section-feedback {
+  background-color: #aec4c4;
+}
+
+.section-contact {
+  background-color: #fffdf0;
+}
+
+/* Dark mode overrides (if toggled) */
+.dark body {
+  background-color: #0f1c16;
+  color: #f2edd1;
+}
+
+.dark .section-hero {
+  background-color: #1a2f26;
+}
+
+.dark .section-about {
+  background-color: #12211b;
+}
+
+.dark .section-services {
+  background-color: #162a22;
+}
+
+.dark .section-feedback {
+  background-color: #1a2f26;
+}
+
+.dark .section-contact {
+  background-color: #12211b;
+}
+
+.dark .btn-pill {
+  @apply border-canva-sand text-canva-sand hover:bg-canva-sand hover:text-canva-green-dark;
+}
+
+.dark .btn-pill-solid {
+  @apply bg-canva-sand text-canva-green-dark hover:bg-white;
+}

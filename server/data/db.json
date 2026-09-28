@@ -1,0 +1,387 @@
+{
+  "profile": {
+    "name": "Divyanshu Kumar",
+    "role": "Full Stack Developer (MERN)",
+    "education": "B.Tech in Computer Science and Engineering",
+    "email": "divy9anshu@gmail.com",
+    "phone": "+91-9334805955",
+    "location": "India",
+    "bio": "Full Stack Web Developer (MERN) and B.Tech Computer Science graduate with hands-on internship experience building scalable web applications using React.js, Node.js, Express.js, MongoDB, and MySQL. Experienced in REST APIs, authentication, Git/GitHub, CI/CD, Agile development, and cloud deployment. Passionate about building secure, reliable, and user-focused web products.",
+    "availability": "Available for Full-time Roles & Freelance Projects",
+    "github": "https://github.com/divy9anshu",
+    "linkedin": "https://www.linkedin.com/in/divyanshu-kumar-86736a257/"
+  },
+  "skills": {
+    "frontend": [
+      {
+        "name": "React.js & JavaScript (ES6+)",
+        "level": "Advanced",
+        "icon": "Code2"
+      },
+      {
+        "name": "HTML5, CSS3 & Responsive Design",
+        "level": "Advanced",
+        "icon": "Layout"
+      },
+      {
+        "name": "Tailwind CSS & Modern UI/UX",
+        "level": "Advanced",
+        "icon": "Palette"
+      },
+      {
+        "name": "State Management & Hooks",
+        "level": "Advanced",
+        "icon": "Layers"
+      }
+    ],
+    "backend": [
+      {
+        "name": "Node.js & Express.js",
+        "level": "Advanced",
+        "icon": "Server"
+      },
+      {
+        "name": "REST API Architecture & Design",
+        "level": "Advanced",
+        "icon": "Cpu"
+      },
+      {
+        "name": "Authentication & Security (JWT, OAuth, Bcrypt)",
+        "level": "Advanced",
+        "icon": "ShieldCheck"
+      },
+      {
+        "name": "Microservices & Webhooks",
+        "level": "Intermediate",
+        "icon": "Workflow"
+      }
+    ],
+    "database": [
+      {
+        "name": "MongoDB & Mongoose ODM",
+        "level": "Advanced",
+        "icon": "Database"
+      },
+      {
+        "name": "MySQL & Relational Schema Design",
+        "level": "Intermediate",
+        "icon": "Table"
+      },
+      {
+        "name": "Indexing, Query Optimization & Caching",
+        "level": "Intermediate",
+        "icon": "Zap"
+      }
+    ],
+    "devops": [
+      {
+        "name": "Git & GitHub Version Control",
+        "level": "Advanced",
+        "icon": "GitBranch"
+      },
+      {
+        "name": "CI/CD Pipelines & GitHub Actions",
+        "level": "Intermediate",
+        "icon": "RefreshCw"
+      },
+      {
+        "name": "Cloud Deployment (Vercel, Render, AWS)",
+        "level": "Intermediate",
+        "icon": "Cloud"
+      },
+      {
+        "name": "Agile, Scrum & Code Quality",
+        "level": "Advanced",
+        "icon": "CheckCircle"
+      }
+    ]
+  },
+  "services": [
+    {
+      "id": "full-stack-dev",
+      "title": "Full Stack Web Development",
+      "description": "End-to-end web applications crafted with MERN stack (React, Node, Express, MongoDB/MySQL) for high performance, reliability, and scale.",
+      "icon": "Code2"
+    },
+    {
+      "id": "responsive-design",
+      "title": "Responsive Web Design",
+      "description": "Pixel-perfect, mobile-first editorial interfaces built with Tailwind CSS and modern UX practices that captivate users across all devices.",
+      "icon": "Layout"
+    },
+    {
+      "id": "rest-api-dev",
+      "title": "REST API Development",
+      "description": "Clean, robust, well-documented RESTful APIs designed with enterprise-grade error handling, validation, rate-limiting, and security.",
+      "icon": "Cpu"
+    },
+    {
+      "id": "database-design",
+      "title": "Database Design & Optimization",
+      "description": "Scalable relational (MySQL) and NoSQL (MongoDB) schemas, indexing strategies, and optimized queries for heavy concurrent traffic.",
+      "icon": "Database"
+    },
+    {
+      "id": "api-integration",
+      "title": "API & Third-Party Integration",
+      "description": "Seamless integration with payment gateways (Stripe, Razorpay), authentication providers (OAuth, Auth0), and external cloud services.",
+      "icon": "Workflow"
+    },
+    {
+      "id": "perf-optimization",
+      "title": "Performance & Cloud Deployment",
+      "description": "Core Web Vitals optimization, lazy loading, caching strategies, and automated CI/CD deployment pipelines on modern cloud infrastructure.",
+      "icon": "Cloud"
+    }
+  ],
+  "projects": [
+    {
+      "id": "novavault-saas",
+      "title": "NovaVault — Enterprise Workspace & Document Management",
+      "category": "Full Stack",
+      "featured": true,
+      "tagline": "Collaborative document & team asset management platform with real-time sync and RBAC.",
+      "image": "/images/hero-thumb-1.jpg",
+      "tags": [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Tailwind CSS",
+        "JWT",
+        "AWS S3"
+      ],
+      "demoUrl": "https://novavault-demo.vercel.app",
+      "githubUrl": "https://github.com/divyanshu-kumar/novavault-saas",
+      "prd": {
+        "version": "v2.1.0",
+        "author": "Divyanshu Kumar (Lead Full Stack Engineer)",
+        "problemStatement": "Distributed teams struggle with fragmented document versions, slow search times, and inadequate permission governance across multi-tenant departments.",
+        "targetAudience": "Startups, remote engineering teams, and enterprise product squads needing compliant, fast asset sharing.",
+        "userStories": [
+          "As an Admin, I want role-based permissions (Viewer, Editor, Admin) so sensitive docs remain protected.",
+          "As a User, I want real-time search with tags and fuzzy filtering to find documents in < 150ms.",
+          "As a Collaborator, I want automated document versioning and activity audit logs."
+        ],
+        "technicalArchitecture": "Three-tier architecture with React SPA frontend, stateless Express REST API backend, JWT + HttpOnly cookies authentication, MongoDB document store with text indexes, and AWS S3 for encrypted file blobs.",
+        "keyFeatures": [
+          "Multi-tenant Role Based Access Control (RBAC)",
+          "S3 Direct Multipart Upload with Presigned URLs",
+          "Automated Document Version History & Restore",
+          "Full-text fuzzy search & indexing engine",
+          "Real-time activity audit trails & notification hooks"
+        ],
+        "apiEndpoints": [
+          "POST /api/v1/auth/login — Secure JWT authentication",
+          "GET /api/v1/documents — Paginated & filtered document list",
+          "POST /api/v1/documents/upload-url — Presigned S3 upload token",
+          "GET /api/v1/workspaces/:id/audit — Real-time activity log stream"
+        ],
+        "metrics": "Sub-180ms average API response time, 99.9% uptime in load testing, 45% reduction in search latency."
+      }
+    },
+    {
+      "id": "pulseflow-analytics",
+      "title": "PulseFlow — Real-Time Product Analytics & Heatmap Engine",
+      "category": "Backend & APIs",
+      "featured": true,
+      "tagline": "High-throughput event ingestion API & interactive analytics dashboard for user behavioral insights.",
+      "image": "/images/hero-thumb-2.jpg",
+      "tags": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "React",
+        "Chart.js",
+        "REST API",
+        "Redis"
+      ],
+      "demoUrl": "https://pulseflow-analytics.vercel.app",
+      "githubUrl": "https://github.com/divyanshu-kumar/pulseflow-analytics",
+      "prd": {
+        "version": "v1.4.0",
+        "author": "Divyanshu Kumar",
+        "problemStatement": "High SaaS analytics costs and bloated client SDKs slow down web applications while providing rigid, delayed reporting.",
+        "targetAudience": "Product Managers, Growth Marketers, and Engineering Leads tracking conversion funnels.",
+        "userStories": [
+          "As an Engineer, I need a lightweight < 5KB tracking script to send custom telemetry events.",
+          "As a Marketer, I want dynamic funnel visualization to pinpoint user drop-off points.",
+          "As an Admin, I want real-time active user telemetry updated every 3 seconds."
+        ],
+        "technicalArchitecture": "Express event ingestion microservice with batched write buffering into MongoDB, Redis caching layer for instant query aggregation, and React dashboard with customizable chart widgets.",
+        "keyFeatures": [
+          "High-throughput non-blocking event collection endpoint",
+          "Interactive conversion funnel & retention cohort charts",
+          "Custom event filtering, geographic breakdowns, and device stats",
+          "CSV/JSON export & automated email digest scheduling"
+        ],
+        "apiEndpoints": [
+          "POST /api/v1/collect — Ingestion endpoint (handles 5,000+ req/s)",
+          "GET /api/v1/analytics/funnel — Conversion funnel aggregation",
+          "GET /api/v1/analytics/realtime — Active sessions and live events"
+        ],
+        "metrics": "Ingested 10M+ mock events in stress tests with zero packet drop; average aggregation latency < 90ms."
+      }
+    },
+    {
+      "id": "shopnexus-ecommerce",
+      "title": "ShopNexus — Modern Headless E-Commerce Platform",
+      "category": "Full Stack",
+      "featured": true,
+      "tagline": "Ultra-fast headless commerce store with inventory locking, Stripe checkout, and merchant CMS.",
+      "image": "/images/contact-bg.jpg",
+      "tags": [
+        "React",
+        "Tailwind CSS",
+        "Node.js",
+        "Express",
+        "MySQL",
+        "Stripe API",
+        "JWT"
+      ],
+      "demoUrl": "https://shopnexus-store.vercel.app",
+      "githubUrl": "https://github.com/divyanshu-kumar/shopnexus-ecommerce",
+      "prd": {
+        "version": "v3.0.0",
+        "author": "Divyanshu Kumar",
+        "problemStatement": "Legacy e-commerce sites suffer from slow checkout speeds, cart abandonment due to stock race conditions, and clunky mobile experiences.",
+        "targetAudience": "Direct-to-consumer lifestyle brands and modern retail businesses.",
+        "userStories": [
+          "As a Shopper, I want instant cart updates and 1-click checkout with Stripe.",
+          "As a Merchant, I want real-time stock sync and low-inventory alerts.",
+          "As an Admin, I want a unified order fulfillment and customer refund interface."
+        ],
+        "technicalArchitecture": "React with Tailwind CSS for instant hydration and mobile gestures; Express.js backend connected to MySQL with ACID transactions for inventory reservation; Stripe Webhook handler for verified payment settlements.",
+        "keyFeatures": [
+          "Atomic inventory locking prevents double-booking during peak sales",
+          "Stripe Payment Elements integration (Card, Apple Pay, Google Pay)",
+          "Dynamic product variants (Size, Color, Material) with live SKU lookup",
+          "Admin Order Management with status workflows & tracking updates"
+        ],
+        "apiEndpoints": [
+          "POST /api/v1/orders/checkout — Initialize Stripe payment session",
+          "POST /api/v1/webhooks/stripe — Webhook listener for charge.success",
+          "GET /api/v1/products — Filtered catalog by categories & price range",
+          "PATCH /api/v1/admin/orders/:id — Update fulfillment tracking"
+        ],
+        "metrics": "Lighthouse Performance Score 98/100, 1.2s average checkout completion time."
+      }
+    },
+    {
+      "id": "agiletrack-kanban",
+      "title": "AgileTrack — Collaborative Task Management & Sprint Suite",
+      "category": "Frontend & UI",
+      "featured": false,
+      "tagline": "Drag-and-drop Kanban workflow tool with sprint velocity tracking, task dependencies, and mentions.",
+      "image": "/images/hero-portrait.jpg",
+      "tags": [
+        "React",
+        "Tailwind CSS",
+        "Express",
+        "MongoDB",
+        "Drag & Drop",
+        "REST API"
+      ],
+      "demoUrl": "https://agiletrack-app.vercel.app",
+      "githubUrl": "https://github.com/divyanshu-kumar/agiletrack-kanban",
+      "prd": {
+        "version": "v1.2.0",
+        "author": "Divyanshu Kumar",
+        "problemStatement": "Existing project management tools are overly complex, bloated with useless features, and slow to load on mobile.",
+        "targetAudience": "Agile engineering teams, designers, and freelance contractors.",
+        "userStories": [
+          "As a Developer, I want smooth drag-and-drop column transitions to update ticket statuses effortlessly.",
+          "As a Scrum Master, I want automatic burndown charts generated per 2-week sprint cycle.",
+          "As a Team Member, I want markdown comments with @mentions."
+        ],
+        "technicalArchitecture": "Optimistic UI updates on frontend with React state; Express REST API with MongoDB transactional status updates and WebSocket broadcast for collaborative board sync.",
+        "keyFeatures": [
+          "Zero-lag drag and drop Kanban boards with custom swimlanes",
+          "Sprint backlog prioritization and estimation point calculators",
+          "Markdown support in task descriptions and discussion threads",
+          "Activity history with undo/redo capabilities"
+        ],
+        "apiEndpoints": [
+          "GET /api/v1/boards/:id — Full board status with columns and tickets",
+          "PUT /api/v1/tickets/:id/move — Update card position and column state",
+          "POST /api/v1/tickets/:id/comments — Add markdown thread response"
+        ],
+        "metrics": "Zero UI stuttering (60fps drag animations), < 50ms optimistic state reconciliation."
+      }
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "t1",
+      "name": "Amrita Sekhon",
+      "company": "Sekhon Unlimited",
+      "role": "VP of Product",
+      "avatar": "/images/client-1.jpg",
+      "content": "Divyanshu's contribution to our full-stack web application was invaluable. His grasp of React, Node.js, and clean API architecture transformed our delivery speed and user experience.",
+      "rating": 5,
+      "date": "September 2026"
+    },
+    {
+      "id": "t2",
+      "name": "Simran Ahluwalia",
+      "company": "Ahluwalia Industries",
+      "role": "Technology Director",
+      "avatar": "/images/client-2.jpg",
+      "content": "Divyanshu provided us with valuable and actionable technical solutions for our business. He is reliable, proactive, and builds exceptionally clean, well-tested code.",
+      "rating": 5,
+      "date": "August 2026"
+    },
+    {
+      "id": "t3",
+      "name": "Esha Dhaliwal",
+      "company": "Dhaliwal Industries",
+      "role": "Operations Lead",
+      "avatar": "/images/client-3.jpg",
+      "content": "Divyanshu's work helped shift our focus to priority areas that needed our attention. His responsive design and database optimization cut our app loading times in half.",
+      "rating": 5,
+      "date": "July 2026"
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg_1790593149554_qjep4",
+      "name": "Sarah Jenkins",
+      "email": "sarah.jenkins@techcorp.io",
+      "phone": "+1-555-0199",
+      "subject": "Full-Stack Web Development Project",
+      "message": "We loved your portfolio and would like to interview you for a Senior Full Stack Engineer role.",
+      "createdAt": "2026-09-28T10:59:09.555Z",
+      "read": false
+    },
+    {
+      "id": "msg_1790591859968_ce3kt",
+      "name": "Sarah Jenkins",
+      "email": "sarah.jenkins@techcorp.io",
+      "phone": "+1-555-0199",
+      "subject": "Full-Stack Web Development Project",
+      "message": "We loved your portfolio and would like to interview you for a Senior Full Stack Engineer role.",
+      "createdAt": "2026-09-28T10:37:39.968Z",
+      "read": false
+    },
+    {
+      "id": "msg_1790591584496_1o8jj",
+      "name": "Sarah Jenkins",
+      "email": "sarah.jenkins@techcorp.io",
+      "phone": "+1-555-0199",
+      "subject": "Full-Stack Web Development Project",
+      "message": "We loved your portfolio and would like to interview you for a Senior Full Stack Engineer role.",
+      "createdAt": "2026-09-28T10:33:04.496Z",
+      "read": false
+    },
+    {
+      "id": "msg_1790588993303_1taqp",
+      "name": "Sarah Jenkins",
+      "email": "sarah.jenkins@techcorp.io",
+      "phone": "+1-555-0199",
+      "subject": "Full-Stack Web Development Project",
+      "message": "We loved your portfolio and would like to interview you for a Senior Full Stack Engineer role.",
+      "createdAt": "2026-09-28T09:49:53.304Z",
+      "read": false
+    }
+  ]
+}
