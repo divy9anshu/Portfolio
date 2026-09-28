@@ -92,6 +92,25 @@ npm run dev
 
 ---
 
+## ☁️ Deployment on Vercel
+
+This repository is fully configured for zero-config 1-click deployment on **Vercel** with full serverless API support and Vite SPA routing.
+
+### Option 1: Deploy via Vercel Dashboard (Recommended)
+1. Go to [vercel.com/new](https://vercel.com/new).
+2. Connect your GitHub account and import `https://github.com/divy9anshu/Portfolio`.
+3. Keep default settings (Framework Preset: **Vite**, Build Command: `npm run build`, Output Directory: `dist`).
+4. Click **Deploy**.
+
+### Option 2: Deploy via Vercel CLI
+```bash
+npx vercel
+# To deploy to production:
+npx vercel --prod
+```
+
+---
+
 ## 👤 Developer Information
 
 - **Name**: Divyanshu Kumar
