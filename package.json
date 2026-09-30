@@ -15,7 +15,9 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "google-auth-library": "^11.1.0",
     "lucide-react": "^0.469.0",
+    "nodemailer": "^10.0.13",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

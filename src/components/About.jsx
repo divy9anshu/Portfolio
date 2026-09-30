@@ -1,92 +1,38 @@
 import React from 'react';
-import { Download, GraduationCap, Award, Briefcase, CheckCircle2 } from 'lucide-react';
+import { Download, Eye, GraduationCap, Award, Briefcase, CheckCircle2, ArrowUpRight } from 'lucide-react';
 
 export default function About() {
   const experiences = [
     {
-      company: "Maryamurti",
+      company: "Maryamurti Pvt. Ltd.",
       role: "Full Stack Developer Intern",
-      period: "Internship",
-      tech: "React.js • Node.js • MongoDB • JWT",
-      point: "Built full-stack modules & optimized MongoDB queries by 30%"
-    },
-    {
-      company: "AndroWebsTech",
-      role: "Web Developer Intern",
-      period: "Internship",
-      tech: "React.js • Tailwind CSS • REST APIs",
-      point: "Engineered responsive UIs with ~25% faster page load speed"
-    },
-    {
-      company: "SmartBridge / Salesforce",
-      role: "Salesforce Developer Intern",
-      period: "Virtual",
-      tech: "Apex • SOQL • Cloud Architecture",
-      point: "Developed custom Apex triggers and relational database schemas"
+      period: "Jun 2025 – Nov 2025",
+      tech: "React.js • Redux • Node.js • Express.js • MongoDB • JWT",
+      point: "Developed ManoIndia frontend modules with RBAC; hardened REST APIs and cut MongoDB query response times by 30%."
     },
     {
       company: "Intellio Intern",
+      role: "Machine Learning Intern",
+      period: "Jan 2026 – Mar 2026",
+      tech: "Python • Flask REST APIs • Random Forest • SVM",
+      point: "Built ML classification pipelines achieving up to 94% accuracy and deployed secure model-serving REST API endpoints (Grade: A+ 95%)."
+    },
+    {
+      company: "AndroWebsTech Pvt. Ltd.",
       role: "Software Developer Intern",
-      period: "Internship",
-      tech: "JavaScript • Node.js • REST APIs",
-      point: "Built backend integration endpoints and Postman test suites"
+      period: "Mar 2025 – Apr 2025",
+      tech: "HTML5 • CSS3 • Bootstrap • JavaScript • PHP",
+      point: "Built a 10+ page Zerodha-clone real-time trading platform interface with responsive layouts and cross-browser support."
     }
   ];
 
   const certifications = [
-    { title: "DSA in Java (400+ Problems)", issuer: "Apna College" },
-    { title: "Full Stack MERN Web Development", issuer: "Apna College" },
-    { title: "Salesforce Developer Virtual Internship", issuer: "SmartBridge / Salesforce" }
+    { title: "Career Essentials in Cybersecurity", issuer: "Microsoft & LinkedIn (Aug 2026)" },
+    { title: "CCNA: Introduction to Networks", issuer: "Cisco Networking Academy (Mar 2025)" },
+    { title: "CCNA: Switching, Routing & Wireless", issuer: "Cisco Networking Academy (Apr 2025)" },
+    { title: "DSA with Java (400+ Problems)", issuer: "Apna College" },
+    { title: "Full Stack Web Development (MERN)", issuer: "Apna College" }
   ];
-
-  const handleDownloadResume = () => {
-    const resumeText = `DIVYANSHU KUMAR
-Full Stack Web Developer (MERN)
-Phone: +91-9334805955 | Email: divy9anshu@gmail.com
-GitHub: https://github.com/divy9anshu | LinkedIn: https://www.linkedin.com/in/divyanshu-kumar-86736a257/
-
-EDUCATION
-- B.Tech in Computer Science & Engineering
-  Sitamarhi Institute of Technology (SIT) | 2022 – 2026
-
-WORK EXPERIENCE
-1. Maryamurti — Full Stack Web Developer Intern
-   - Built MERN features with React, Node.js, Express, and MongoDB.
-   - Optimized MongoDB queries and indexing, cutting latency by 30%.
-   - Implemented JWT authentication and role-based access control.
-
-2. AndroWebsTech — Web Developer Intern
-   - Built responsive React interfaces with ~25% faster load times.
-   - Developed modular REST API endpoints in Express.js.
-
-3. SmartBridge / Salesforce — Developer Virtual Intern
-   - Developed custom Apex triggers, SOQL queries, and data models.
-
-4. Intellio Intern — Software Developer Intern
-   - Engineered backend integration services and Postman test suites.
-
-SKILLS
-- Languages: JavaScript (ES6+), Java, SQL, HTML5, CSS3
-- Frontend: React.js, Tailwind CSS, Context API, Hooks, Responsive UI
-- Backend: Node.js, Express.js, RESTful APIs, JWT Auth, Middleware
-- Databases: MongoDB (Mongoose), MySQL, Schema Design, Optimization
-- Tools: Git, GitHub, Postman, Vercel, Render, AWS (Basics)
-
-CERTIFICATIONS
-- Apna College: DSA with Java (400+ problems solved)
-- Apna College: Complete MERN Stack Web Development
-- Salesforce Developer Virtual Internship
-`;
-    const blob = new Blob([resumeText], { type: 'text/plain;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'Divyanshu_Kumar_Resume.txt';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
-  };
 
   return (
     <section
@@ -130,7 +76,7 @@ CERTIFICATIONS
 
             {/* Description Narrative */}
             <p className="font-hoves text-sm sm:text-base text-canva-green/90 dark:text-canva-sand/90 font-normal leading-relaxed text-justify sm:text-left">
-              Full Stack Web Developer (MERN) and B.Tech Computer Science student at <strong>Sitamarhi Institute of Technology (2022–2026)</strong> with hands-on internship experience building scalable web applications using React.js, Node.js, Express.js, MongoDB, and MySQL. Experienced in REST APIs, authentication, Git/GitHub, CI/CD, Agile development, and cloud deployment. Passionate about building secure, reliable, and user-focused web products.
+              Software Developer with <strong>9+ months of full-stack internship experience</strong> building secure, scalable web applications using <strong>JavaScript, TypeScript, React.js, Redux, Node.js, Express.js, and MongoDB</strong>. Skilled in REST API design, authentication & RBAC, MySQL/MongoDB optimization, Git/GitHub, CI/CD, and AWS (EC2, S3) cloud deployment. Strong foundation in Data Structures & Algorithms, OOP, DBMS, OS, and Computer Networks (CCNA-certified), with hands-on unit testing (Jest) and OWASP-aligned secure coding.
             </p>
 
             {/* Education Box */}
@@ -138,49 +84,61 @@ CERTIFICATIONS
               <div className="flex items-center gap-2.5">
                 <GraduationCap className="text-canva-green dark:text-canva-sand" size={22} />
                 <h3 className="font-migra text-xl font-bold text-canva-green dark:text-canva-sand">
-                  B.Tech in Computer Science & Engineering
+                  B.Tech in Computer Science & Engineering (Graduated)
                 </h3>
               </div>
               <p className="text-xs font-semibold text-canva-muted dark:text-canva-sand/80 font-hoves">
-                Sitamarhi Institute of Technology (SIT) • 2022 – 2026
+                Sitamarhi Institute of Technology (SIT), Bihar • 2022 – 2026
               </p>
             </div>
 
             {/* Core Competencies Badges */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 pt-1 font-hoves text-xs font-semibold text-canva-green dark:text-canva-sand">
               <div className="p-3 rounded-xl bg-canva-sand/40 dark:bg-canva-green/20 border border-canva-green/15 text-center">
-                MERN Stack
+                React.js & Redux
               </div>
               <div className="p-3 rounded-xl bg-canva-sand/40 dark:bg-canva-green/20 border border-canva-green/15 text-center">
-                REST APIs
+                Node.js & Express
               </div>
               <div className="p-3 rounded-xl bg-canva-sand/40 dark:bg-canva-green/20 border border-canva-green/15 text-center">
                 MongoDB & MySQL
               </div>
               <div className="p-3 rounded-xl bg-canva-sand/40 dark:bg-canva-green/20 border border-canva-green/15 text-center">
-                JWT Auth & RBAC
+                TypeScript & REST
               </div>
               <div className="p-3 rounded-xl bg-canva-sand/40 dark:bg-canva-green/20 border border-canva-green/15 text-center">
-                Git & CI/CD
+                AWS (EC2, S3) & Docker
               </div>
               <div className="p-3 rounded-xl bg-canva-sand/40 dark:bg-canva-green/20 border border-canva-green/15 text-center">
-                Cloud Deployment
+                CCNA & Cybersecurity
               </div>
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
-              <button
-                onClick={handleDownloadResume}
-                className="btn-pill-solid px-7 py-3 text-xs uppercase tracking-wider font-semibold flex items-center gap-2 shadow-md"
+            <div className="flex flex-wrap items-center gap-3.5 pt-2">
+              <a
+                href="/Divyanshu_Kumar_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-pill-solid px-7 py-3 text-xs uppercase tracking-wider font-semibold flex items-center gap-2 shadow-md hover:shadow-lg transition-all"
+              >
+                <Eye size={15} />
+                <span>View Resume (PDF)</span>
+                <ArrowUpRight size={14} />
+              </a>
+
+              <a
+                href="/Divyanshu_Kumar_Resume.pdf"
+                download="Divyanshu_Kumar_Resume.pdf"
+                className="btn-pill px-6 py-3 text-xs uppercase tracking-wider font-semibold flex items-center gap-2 border border-canva-green/40 dark:border-canva-sand/40"
               >
                 <Download size={14} />
-                <span>Download Resume</span>
-              </button>
+                <span>Download PDF</span>
+              </a>
 
               <a
                 href="#projects"
-                className="btn-pill px-7 py-3 text-xs uppercase tracking-wider font-semibold"
+                className="btn-pill px-6 py-3 text-xs uppercase tracking-wider font-semibold"
               >
                 <span>View Projects</span>
               </a>

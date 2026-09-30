@@ -15,18 +15,19 @@ const initialData = {
   profile: {
     name: "Divyanshu Kumar",
     title: "Full Stack Web Developer (MERN)",
-    headline: "Hi, my name is Divyanshu Kumar and I'm a FullStack Developer",
-    education: "B.Tech in Computer Science & Engineering",
-    college: "Sitamarhi Institute of Technology (SIT)",
+    headline: "Hi, my name is Divyanshu Kumar and I'm a Full Stack Developer",
+    education: "B.Tech in Computer Science & Engineering (Graduated)",
+    college: "Sitamarhi Institute of Technology (SIT), Bihar",
     email: "divy9anshu@gmail.com",
     phone: "+91-9334805955",
-    location: "India • Remote & Onsite",
-    bio: "Full Stack Developer (MERN) and B.Tech CSE graduate with hands-on internship experience in React.js, Node.js, Express.js, MongoDB, and MySQL.",
-    availability: "Open to Full-time Roles & Contracts",
+    location: "Hyderabad, Telangana, India",
+    bio: "Software Developer with 9+ months of full-stack internship experience building secure, scalable web applications using JavaScript, TypeScript, React.js, Redux, Node.js, Express.js, and MongoDB. Skilled in REST API design, authentication/RBAC, AWS (EC2, S3), CI/CD, and CCNA networking.",
+    availability: "Open to Full-time Roles & Immediate Joining",
     github: "https://github.com/divy9anshu",
     linkedin: "https://www.linkedin.com/in/divyanshu-kumar-86736a257/",
+    resumeUrl: "/Divyanshu_Kumar_Resume.pdf",
     stats: {
-      internship: "6+ Months",
+      internship: "9+ Months",
       projects: "12+ Built",
       quality: "99% Code Quality",
       response: "< 4 Hrs"
@@ -34,12 +35,24 @@ const initialData = {
   },
   education: [
     {
-      degree: "B.Tech in Computer Science & Engineering",
-      institution: "Sitamarhi Institute of Technology (SIT)",
+      degree: "B.Tech in Computer Science & Engineering (Graduated)",
+      institution: "Sitamarhi Institute of Technology (SIT), Bihar",
       year: "2022 – 2026"
     }
   ],
   certifications: [
+    {
+      title: "Career Essentials in Cybersecurity",
+      issuer: "Microsoft & LinkedIn Learning (Aug 2026)"
+    },
+    {
+      title: "CCNA: Introduction to Networks",
+      issuer: "Cisco Networking Academy (Mar 2025)"
+    },
+    {
+      title: "CCNA: Switching, Routing & Wireless Essentials",
+      issuer: "Cisco Networking Academy (Apr 2025)"
+    },
     {
       title: "DSA in Java (400+ Problems)",
       issuer: "Apna College"
@@ -47,68 +60,53 @@ const initialData = {
     {
       title: "Full Stack MERN Web Development",
       issuer: "Apna College"
-    },
-    {
-      title: "Salesforce Developer Virtual Internship",
-      issuer: "SmartBridge / Salesforce"
     }
   ],
   experience: [
     {
       id: "exp-1",
-      company: "Maryamurti",
+      company: "Maryamurti Pvt. Ltd.",
       role: "Full Stack Developer Intern",
-      period: "Internship",
-      location: "Remote",
+      period: "Jun 2025 – Nov 2025",
+      location: "Patna, Bihar (ManoIndia Platform)",
       bullets: [
-        "Built MERN stack modules with React.js & Node.js",
-        "Optimized MongoDB queries and indexes by 30%",
-        "Implemented JWT authentication and RBAC"
+        "Developed 5+ reusable React.js & Redux frontend modules and implemented JWT authentication/RBAC serving 500+ users, cutting load times by ~25%.",
+        "Hardened Node.js/Express.js REST APIs with OWASP-aligned input validation and Postman-tested endpoints.",
+        "Optimized MongoDB schemas and indexing strategies, cutting average query response times by 30%."
       ],
-      technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT"]
+      technologies: ["React.js", "Redux", "Node.js", "Express.js", "MongoDB", "JWT", "REST APIs"]
     },
     {
       id: "exp-2",
-      company: "AndroWebsTech",
-      role: "Web Developer Intern",
-      period: "Internship",
-      location: "India",
+      company: "Intellio Intern",
+      role: "Machine Learning Intern",
+      period: "Jan 2026 – Mar 2026",
+      location: "Remote (Grade: A+ 95%)",
       bullets: [
-        "Engineered responsive React UIs with ~25% faster load speeds",
-        "Built REST API endpoints for content and user management"
+        "Built and evaluated ML models (Random Forest, SVM, Logistic Regression) in Python, achieving up to 94% accuracy.",
+        "Deployed end-to-end ML pipelines via Flask REST APIs, gaining hands-on experience securing model-serving endpoints."
       ],
-      technologies: ["React.js", "Node.js", "Tailwind CSS", "REST APIs"]
+      technologies: ["Python", "Flask", "REST APIs", "Machine Learning", "Scikit-Learn"]
     },
     {
       id: "exp-3",
-      company: "SmartBridge / Salesforce",
-      role: "Salesforce Developer Intern",
-      period: "Virtual Internship",
-      location: "Virtual",
-      bullets: [
-        "Developed custom Apex triggers and cloud data models",
-        "Designed relational schemas and SOQL queries"
-      ],
-      technologies: ["Salesforce", "Apex", "SOQL", "Cloud"]
-    },
-    {
-      id: "exp-4",
-      company: "Intellio Intern",
+      company: "AndroWebsTech Pvt. Ltd.",
       role: "Software Developer Intern",
-      period: "Internship",
+      period: "Mar 2025 – Apr 2025",
       location: "India",
       bullets: [
-        "Built backend API integration services",
-        "Executed comprehensive Postman test suites"
+        "Built a Zerodha-clone trading platform website (10+ pages) using HTML5, CSS3, Bootstrap, and PHP.",
+        "Engineered responsive layouts and ensured full cross-browser compatibility."
       ],
-      technologies: ["JavaScript", "Node.js", "REST APIs", "Postman"]
+      technologies: ["HTML5", "CSS3", "Bootstrap", "JavaScript", "PHP"]
     }
   ],
   skills: {
-    frontend: ["React.js", "JavaScript (ES6+)", "HTML5 & CSS3", "Tailwind CSS"],
-    backend: ["Node.js", "Express.js", "RESTful APIs", "JWT Authentication"],
-    databases: ["MongoDB", "Mongoose ODM", "MySQL", "Query Optimization"],
-    devops: ["Git & GitHub", "CI/CD", "Vercel", "Render", "Postman"]
+    languages: ["Java", "Python", "JavaScript (ES6+)", "TypeScript", "SQL", "C/C++"],
+    frontend: ["React.js", "Redux", "Next.js", "HTML5 & CSS3", "Tailwind CSS", "Bootstrap"],
+    backend: ["Node.js", "Express.js", "Flask", "RESTful APIs", "JWT Auth & RBAC"],
+    databasesAndCloud: ["MongoDB", "MySQL", "AWS (EC2, S3)", "Vercel", "Docker"],
+    toolsAndCore: ["Git/GitHub", "CI/CD", "Postman", "Jest", "CCNA Networking", "OWASP Security"]
   },
   services: [
     {
@@ -401,11 +399,14 @@ export function addTestimonial(testimonial) {
   const newTestimonial = {
     id: 't_' + Date.now(),
     name: testimonial.name || 'Anonymous',
+    email: testimonial.email || '',
     company: testimonial.company || 'Client',
     role: testimonial.role || 'Partner',
     avatar: testimonial.avatar || '/images/client-1.jpg',
     content: testimonial.content || '',
     rating: Number(testimonial.rating) || 5,
+    verifiedWithGoogle: !!testimonial.verifiedWithGoogle,
+    authMethod: testimonial.authMethod || 'none',
     date: new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
   };
   db.testimonials.unshift(newTestimonial);

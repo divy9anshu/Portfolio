@@ -1,37 +1,7 @@
-import React, { useState } from 'react';
-import { Quote, Star, PlusCircle, Check, X } from 'lucide-react';
+import React from 'react';
+import { Star } from 'lucide-react';
 
-export default function Feedback({ testimonials = [], onAddFeedback }) {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [form, setForm] = useState({
-    name: '',
-    company: '',
-    role: '',
-    content: '',
-    rating: 5
-  });
-  const [submitting, setSubmitting] = useState(false);
-  const [success, setSuccess] = useState(false);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!form.name || !form.content) return;
-    setSubmitting(true);
-    try {
-      await onAddFeedback(form);
-      setSuccess(true);
-      setTimeout(() => {
-        setSuccess(false);
-        setModalOpen(false);
-        setForm({ name: '', company: '', role: '', content: '', rating: 5 });
-      }, 1500);
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setSubmitting(false);
-    }
-  };
-
+export default function Feedback({ testimonials = [] }) {
   return (
     <section
       id="feedback"
@@ -40,23 +10,13 @@ export default function Feedback({ testimonials = [], onAddFeedback }) {
       <div className="max-w-7xl mx-auto space-y-14">
         
         {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 text-center sm:text-left">
-          <div className="space-y-2">
-            <span className="text-xs uppercase tracking-widest font-semibold text-canva-green/80 dark:text-canva-sand/80">
-              Endorsements
-            </span>
-            <h2 className="font-migra text-5xl sm:text-6xl font-extralight text-canva-green dark:text-canva-sand leading-tight">
-              Client Feedback
-            </h2>
-          </div>
-
-          <button
-            onClick={() => setModalOpen(true)}
-            className="btn-pill-solid text-xs uppercase tracking-wider font-semibold py-3 px-6 flex items-center justify-center gap-2 self-center sm:self-auto shadow-md"
-          >
-            <PlusCircle size={14} />
-            <span>Leave a Review</span>
-          </button>
+        <div className="space-y-2 text-center sm:text-left">
+          <span className="text-xs uppercase tracking-widest font-semibold text-canva-green/80 dark:text-canva-sand/80">
+            Endorsements
+          </span>
+          <h2 className="font-migra text-5xl sm:text-6xl font-extralight text-canva-green dark:text-canva-sand leading-tight">
+            Client Feedback
+          </h2>
         </div>
 
         {/* Testimonials 3-Column Grid */}
@@ -84,7 +44,7 @@ export default function Feedback({ testimonials = [], onAddFeedback }) {
                       {t.name}
                     </h4>
                     <p className="text-xs font-semibold text-canva-muted dark:text-canva-sand/80 font-hoves">
-                      {t.company}
+                      {t.company} {t.role && t.role !== 'Client' && `• ${t.role}`}
                     </p>
                   </div>
                 </div>
@@ -112,128 +72,6 @@ export default function Feedback({ testimonials = [], onAddFeedback }) {
         </div>
 
       </div>
-
-      {/* Review Modal */}
-      {modalOpen && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="relative w-full max-w-lg bg-canva-cream dark:bg-canva-green-dark border-2 border-canva-green/30 dark:border-canva-sand/30 rounded-[32px] shadow-2xl p-6 sm:p-8 animate-fadeIn">
-            <div className="flex items-center justify-between pb-3 border-b border-canva-green/15">
-              <h3 className="font-migra text-2xl font-bold text-canva-green dark:text-canva-sand">
-                Leave a Review
-              </h3>
-              <button
-                onClick={() => setModalOpen(false)}
-                className="p-1.5 rounded-full hover:bg-canva-green/10 text-canva-green dark:text-canva-sand"
-              >
-                <X size={18} />
-              </button>
-            </div>
-
-            {success ? (
-              <div className="py-8 text-center space-y-2">
-                <div className="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 mx-auto flex items-center justify-center">
-                  <Check size={20} />
-                </div>
-                <h4 className="font-migra text-xl text-canva-green dark:text-canva-sand">
-                  Thank You!
-                </h4>
-                <p className="text-xs text-canva-muted dark:text-canva-sand/70">
-                  Your feedback has been saved.
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-4 pt-3 font-hoves">
-                <div>
-                  <label className="block text-xs uppercase font-semibold text-canva-green dark:text-canva-sand mb-1">
-                    Name *
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    value={form.name}
-                    onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    placeholder="e.g. Amrita Sekhon"
-                    className="w-full px-4 py-2 rounded-xl bg-canva-sand/50 dark:bg-canva-green/30 border border-canva-green/20 text-canva-green dark:text-canva-sand text-sm focus:outline-none focus:ring-2 focus:ring-canva-green"
-                  />
-                </div>
-
-                <div className="grid grid-cols-2 gap-3">
-                  <div>
-                    <label className="block text-xs uppercase font-semibold text-canva-green dark:text-canva-sand mb-1">
-                      Company
-                    </label>
-                    <input
-                      type="text"
-                      value={form.company}
-                      onChange={(e) => setForm({ ...form, company: e.target.value })}
-                      placeholder="e.g. Sekhon Unlimited"
-                      className="w-full px-4 py-2 rounded-xl bg-canva-sand/50 dark:bg-canva-green/30 border border-canva-green/20 text-canva-green dark:text-canva-sand text-sm focus:outline-none focus:ring-2 focus:ring-canva-green"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs uppercase font-semibold text-canva-green dark:text-canva-sand mb-1">
-                      Role
-                    </label>
-                    <input
-                      type="text"
-                      value={form.role}
-                      onChange={(e) => setForm({ ...form, role: e.target.value })}
-                      placeholder="e.g. VP of Product"
-                      className="w-full px-4 py-2 rounded-xl bg-canva-sand/50 dark:bg-canva-green/30 border border-canva-green/20 text-canva-green dark:text-canva-sand text-sm focus:outline-none focus:ring-2 focus:ring-canva-green"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-xs uppercase font-semibold text-canva-green dark:text-canva-sand mb-1">
-                    Rating
-                  </label>
-                  <select
-                    value={form.rating}
-                    onChange={(e) => setForm({ ...form, rating: Number(e.target.value) })}
-                    className="w-full px-4 py-2 rounded-xl bg-canva-sand/50 dark:bg-canva-green/30 border border-canva-green/20 text-canva-green dark:text-canva-sand text-sm focus:outline-none focus:ring-2 focus:ring-canva-green"
-                  >
-                    <option value={5}>⭐⭐⭐⭐⭐ (5 Stars)</option>
-                    <option value={4}>⭐⭐⭐⭐ (4 Stars)</option>
-                    <option value={3}>⭐⭐⭐ (3 Stars)</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-xs uppercase font-semibold text-canva-green dark:text-canva-sand mb-1">
-                    Review *
-                  </label>
-                  <textarea
-                    required
-                    rows={3}
-                    value={form.content}
-                    onChange={(e) => setForm({ ...form, content: e.target.value })}
-                    placeholder="Your review..."
-                    className="w-full px-4 py-2 rounded-xl bg-canva-sand/50 dark:bg-canva-green/30 border border-canva-green/20 text-canva-green dark:text-canva-sand text-sm focus:outline-none focus:ring-2 focus:ring-canva-green"
-                  />
-                </div>
-
-                <div className="flex items-center justify-end gap-3 pt-2">
-                  <button
-                    type="button"
-                    onClick={() => setModalOpen(false)}
-                    className="btn-pill text-xs py-2 px-4"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    type="submit"
-                    disabled={submitting}
-                    className="btn-pill-solid text-xs py-2 px-5"
-                  >
-                    {submitting ? 'Submitting...' : 'Post'}
-                  </button>
-                </div>
-              </form>
-            )}
-          </div>
-        </div>
-      )}
     </section>
   );
 }

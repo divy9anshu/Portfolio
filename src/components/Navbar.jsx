@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, Moon, Sun, Menu, X, Inbox, ArrowUpRight, Sparkles } from 'lucide-react';
+import { Mail, Phone, Moon, Sun, Menu, X, ArrowUpRight, Sparkles } from 'lucide-react';
 
-export default function Navbar({ onOpenInquiries, unreadCount = 0, darkMode, setDarkMode }) {
+export default function Navbar({ darkMode, setDarkMode }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -54,6 +54,18 @@ export default function Navbar({ onOpenInquiries, unreadCount = 0, darkMode, set
 
         {/* Action Controls */}
         <div className="flex items-center gap-3">
+          {/* View Resume Button */}
+          <a
+            href="/Divyanshu_Kumar_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="View Resume PDF"
+            className="hidden sm:inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider py-1.5 px-3.5 rounded-full border border-canva-green/30 dark:border-canva-sand/30 text-canva-green dark:text-canva-sand hover:bg-canva-green hover:text-canva-cream dark:hover:bg-canva-sand dark:hover:text-canva-green-dark transition-all"
+          >
+            <span>Resume</span>
+            <ArrowUpRight size={13} />
+          </a>
+
           {/* Dark Mode Toggle */}
           <button
             onClick={() => setDarkMode(!darkMode)}
@@ -61,20 +73,6 @@ export default function Navbar({ onOpenInquiries, unreadCount = 0, darkMode, set
             className="p-2.5 rounded-full border border-canva-green/20 dark:border-canva-sand/20 text-canva-green dark:text-canva-sand hover:bg-canva-green/5 dark:hover:bg-canva-sand/10 transition-colors"
           >
             {darkMode ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
-
-          {/* Admin Inquiries Drawer Button */}
-          <button
-            onClick={onOpenInquiries}
-            title="View Received Inquiries"
-            className="relative p-2.5 rounded-full border border-canva-green/20 dark:border-canva-sand/20 text-canva-green dark:text-canva-sand hover:bg-canva-green/5 dark:hover:bg-canva-sand/10 transition-colors"
-          >
-            <Inbox size={18} />
-            {unreadCount > 0 && (
-              <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-amber-600 text-[10px] font-bold text-white">
-                {unreadCount}
-              </span>
-            )}
           </button>
 
           {/* Contact CTA */}
@@ -110,6 +108,15 @@ export default function Navbar({ onOpenInquiries, unreadCount = 0, darkMode, set
               {link.name}
             </a>
           ))}
+          <a
+            href="/Divyanshu_Kumar_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block text-base font-medium text-canva-green dark:text-canva-sand hover:translate-x-2 transition-transform"
+          >
+            📄 View Resume (PDF) ↗
+          </a>
           <div className="pt-4 border-t border-canva-green/10 dark:border-canva-sand/10 flex items-center justify-between">
             <a
               href="mailto:divy9anshu@gmail.com"

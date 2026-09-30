@@ -28,53 +28,64 @@ export default function Hero({ onDownloadResume }) {
 
           {/* Core Focus Badges */}
           <div className="flex flex-wrap gap-2 pt-1 font-hoves text-xs font-semibold text-canva-green dark:text-canva-sand">
-            <span className="px-3 py-1 rounded-full bg-white/40 dark:bg-black/20 border border-canva-green/15 dark:border-canva-sand/15">React.js</span>
+            <span className="px-3 py-1 rounded-full bg-white/40 dark:bg-black/20 border border-canva-green/15 dark:border-canva-sand/15">React.js & Redux</span>
             <span className="px-3 py-1 rounded-full bg-white/40 dark:bg-black/20 border border-canva-green/15 dark:border-canva-sand/15">Node.js & Express</span>
             <span className="px-3 py-1 rounded-full bg-white/40 dark:bg-black/20 border border-canva-green/15 dark:border-canva-sand/15">MongoDB & MySQL</span>
-            <span className="px-3 py-1 rounded-full bg-white/40 dark:bg-black/20 border border-canva-green/15 dark:border-canva-sand/15">REST APIs</span>
+            <span className="px-3 py-1 rounded-full bg-white/40 dark:bg-black/20 border border-canva-green/15 dark:border-canva-sand/15">TypeScript</span>
+            <span className="px-3 py-1 rounded-full bg-white/40 dark:bg-black/20 border border-canva-green/15 dark:border-canva-sand/15">AWS (EC2, S3)</span>
           </div>
 
           {/* Action CTAs */}
-          <div className="flex flex-wrap items-center gap-4 pt-2">
+          <div className="flex flex-wrap items-center gap-3.5 pt-2">
+            <a
+              href="/Divyanshu_Kumar_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-pill-solid px-7 py-3.5 text-xs uppercase tracking-wider font-semibold flex items-center gap-2 shadow-md hover:shadow-lg transition-all"
+            >
+              <Download size={15} />
+              <span>View Resume</span>
+              <ArrowUpRight size={14} />
+            </a>
+
+            <a
+              href="#projects"
+              className="btn-pill px-7 py-3.5 text-xs uppercase tracking-wider font-semibold border-2 border-canva-green dark:border-canva-sand shadow-sm hover:shadow-md flex items-center gap-2"
+            >
+              <FileCode2 size={15} />
+              <span>View Projects</span>
+            </a>
+
             <a
               href="mailto:divy9anshu@gmail.com?subject=Project%20Inquiry%20from%20Portfolio"
-              className="btn-pill px-8 py-3.5 text-xs uppercase tracking-wider font-semibold border-2 border-canva-green dark:border-canva-sand shadow-sm hover:shadow-md flex items-center gap-2"
+              className="btn-pill px-6 py-3.5 text-xs uppercase tracking-wider font-semibold border border-canva-green/40 dark:border-canva-sand/40 flex items-center gap-2"
             >
               <Mail size={15} />
               <span>Email Me</span>
             </a>
 
             <a
-              href="#projects"
-              className="btn-pill-solid px-8 py-3.5 text-xs uppercase tracking-wider font-semibold flex items-center gap-2"
-            >
-              <FileCode2 size={15} />
-              <span>View Projects</span>
-              <ArrowUpRight size={15} />
-            </a>
-
-            <a
               href="#contact"
-              className="p-3.5 rounded-full border border-canva-green/30 dark:border-canva-sand/30 text-canva-green dark:text-canva-sand hover:bg-white/40 dark:hover:bg-white/10 transition-colors"
+              className="p-3 rounded-full border border-canva-green/30 dark:border-canva-sand/30 text-canva-green dark:text-canva-sand hover:bg-white/40 dark:hover:bg-white/10 transition-colors"
               title="Contact"
             >
-              <ArrowDown size={17} />
+              <ArrowDown size={16} />
             </a>
           </div>
 
           {/* Quick Highlights */}
           <div className="grid grid-cols-3 gap-4 pt-6 max-w-lg border-t border-canva-green/20 dark:border-canva-sand/20">
             <div>
-              <div className="font-migra text-2xl sm:text-3xl font-light text-canva-green dark:text-canva-sand">6+ Mos</div>
-              <div className="text-xs uppercase tracking-wider text-canva-green/70 dark:text-canva-sand/70 font-medium">Internship</div>
+              <div className="font-migra text-2xl sm:text-3xl font-light text-canva-green dark:text-canva-sand">9+ Mos</div>
+              <div className="text-xs uppercase tracking-wider text-canva-green/70 dark:text-canva-sand/70 font-medium">Internship Exp</div>
             </div>
             <div>
               <div className="font-migra text-2xl sm:text-3xl font-light text-canva-green dark:text-canva-sand">B.Tech</div>
-              <div className="text-xs uppercase tracking-wider text-canva-green/70 dark:text-canva-sand/70 font-medium">SIT CSE</div>
+              <div className="text-xs uppercase tracking-wider text-canva-green/70 dark:text-canva-sand/70 font-medium">CSE Graduate</div>
             </div>
             <div>
-              <div className="font-migra text-2xl sm:text-3xl font-light text-canva-green dark:text-canva-sand">MERN</div>
-              <div className="text-xs uppercase tracking-wider text-canva-green/70 dark:text-canva-sand/70 font-medium">Full Stack</div>
+              <div className="font-migra text-2xl sm:text-3xl font-light text-canva-green dark:text-canva-sand">Full Stack</div>
+              <div className="text-xs uppercase tracking-wider text-canva-green/70 dark:text-canva-sand/70 font-medium">MERN + Cloud</div>
             </div>
           </div>
         </div>

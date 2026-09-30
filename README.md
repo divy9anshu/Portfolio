@@ -72,6 +72,32 @@ npm run dev
 - Start Backend Only: `npm run server`
 - Start Frontend Only: `npm run client`
 - Build for Production: `npm run build`
+- Test Email Configuration: `node server/test_email.js`
+
+---
+
+## 📧 Direct Email Setup (Receive Messages Directly in Gmail)
+
+To receive portfolio contact messages straight into your Gmail inbox (`divy9anshu@gmail.com`):
+
+1. Go to your [Google Account Security Settings](https://myaccount.google.com/security).
+2. Enable **2-Step Verification** (if not already enabled).
+3. Search for **"App Passwords"** (or visit [https://myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords)).
+4. Enter an app name (e.g. `Portfolio Contact`) and click **Create**.
+5. Copy the generated **16-character password** (e.g. `abcd efgh ijkl mnop`).
+6. Open your `.env` file and set:
+```env
+EMAIL_USER=divy9anshu@gmail.com
+EMAIL_PASS=your_16_character_app_password
+CONTACT_RECEIVER_EMAIL=divy9anshu@gmail.com
+SEND_AUTO_REPLY=true
+```
+7. Verify by running:
+```bash
+node server/test_email.js
+```
+
+> **For Vercel Deployment**: In your Vercel Project Settings > **Environment Variables**, add `EMAIL_USER`, `EMAIL_PASS`, and `CONTACT_RECEIVER_EMAIL`.
 
 ---
 

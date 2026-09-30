@@ -2,14 +2,16 @@
   "profile": {
     "name": "Divyanshu Kumar",
     "role": "Full Stack Developer (MERN)",
-    "education": "B.Tech in Computer Science and Engineering",
+    "education": "B.Tech in Computer Science and Engineering (Graduated)",
+    "college": "Sitamarhi Institute of Technology (SIT), Bihar",
     "email": "divy9anshu@gmail.com",
     "phone": "+91-9334805955",
-    "location": "India",
-    "bio": "Full Stack Web Developer (MERN) and B.Tech Computer Science graduate with hands-on internship experience building scalable web applications using React.js, Node.js, Express.js, MongoDB, and MySQL. Experienced in REST APIs, authentication, Git/GitHub, CI/CD, Agile development, and cloud deployment. Passionate about building secure, reliable, and user-focused web products.",
-    "availability": "Available for Full-time Roles & Freelance Projects",
+    "location": "Hyderabad, Telangana, India",
+    "bio": "Software Developer with 9+ months of full-stack internship experience building secure, scalable web applications using JavaScript, TypeScript, React.js, Redux, Node.js, Express.js, and MongoDB. Skilled in REST API design, authentication/RBAC, AWS (EC2, S3), CI/CD, and CCNA networking.",
+    "availability": "Available for Full-time Roles & Immediate Joining",
     "github": "https://github.com/divy9anshu",
-    "linkedin": "https://www.linkedin.com/in/divyanshu-kumar-86736a257/"
+    "linkedin": "https://www.linkedin.com/in/divyanshu-kumar-86736a257/",
+    "resumeUrl": "/Divyanshu_Kumar_Resume.pdf"
   },
   "skills": {
     "frontend": [
@@ -343,6 +345,36 @@
     }
   ],
   "messages": [
+    {
+      "id": "msg_1790750273088_quw4x",
+      "name": "Divyanshu Kumar",
+      "email": "dianshu@gmail.com",
+      "phone": "+919334805955",
+      "subject": "Web Development Project",
+      "message": "jigbjk",
+      "createdAt": "2026-09-30T06:37:53.089Z",
+      "read": false
+    },
+    {
+      "id": "msg_1790748825424_9ok88",
+      "name": "Divyanshu Kumar",
+      "email": "dianshu@gmail.com",
+      "phone": "+919334805955",
+      "subject": "Web Development Project",
+      "message": "hknj",
+      "createdAt": "2026-09-30T06:13:45.424Z",
+      "read": false
+    },
+    {
+      "id": "msg_1790748774822_5tfld",
+      "name": "Divyanshu Test Recruiter",
+      "email": "recruiter.contact@company.com",
+      "phone": "+91-9334805955",
+      "subject": "Full-Stack Developer Role Discussion",
+      "message": "Hi Divyanshu, We reviewed your portfolio and would like to schedule a technical interview.",
+      "createdAt": "2026-09-30T06:12:54.822Z",
+      "read": false
+    },
     {
       "id": "msg_1790593149554_qjep4",
       "name": "Sarah Jenkins",
